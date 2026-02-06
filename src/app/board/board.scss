@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #776e65;
+}
+
+.button-game {
+  font-size: 16px;
+  background-color: rgb(156 138 124/1);
+  color: #eee1c9;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.button-game:hover {
+  transform: scale(1.1);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 102px 102px 102px;
+  grid-gap: 8px;
+  background-color: rgb(156 138 124/1);
+  padding: 10px;
+}
+
+app-sqaure {
+  border: 1px solid solid;
+  border: none;
+}

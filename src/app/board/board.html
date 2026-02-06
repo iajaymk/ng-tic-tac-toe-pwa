@@ -1,0 +1,16 @@
+<div class="container">
+  <h3>Current Player: {{player}}</h3>
+  <button class="button-game" (click)="newGame()">New Game</button>
+</div>
+
+@if(winner) {
+<h2>Player {{winner}} won the game</h2>
+} @else {
+<h2></h2>
+}
+
+<main>
+  @for(val of squares;track i;let i = $index) {
+  <app-square [value]="val" (click)="makeMove(i)"></app-square>
+  }
+</main>
