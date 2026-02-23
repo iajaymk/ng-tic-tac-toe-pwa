@@ -9,8 +9,16 @@
 <h2></h2>
 }
 
-<main>
-  @for(val of squares;track i;let i = $index) {
-  <app-square [value]="val" (click)="makeMove(i)"></app-square>
-  }
-</main>
+<div class="board">
+  <div class="line v v1"></div>
+  <div class="line v v2"></div>
+
+  <div class="line h h1"></div>
+  <div class="line h h2"></div>
+
+  <main>
+    @for(val of squares;track i;let i = $index) {
+    <app-square [value]="val" (click)="makeMove(i)"></app-square>
+    }
+  </main>
+</div>

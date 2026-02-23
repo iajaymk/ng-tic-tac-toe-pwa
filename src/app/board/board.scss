@@ -21,12 +21,89 @@
 main {
   display: grid;
   grid-template-columns: 102px 102px 102px;
-  grid-gap: 8px;
-  background-color: rgb(156 138 124/1);
-  padding: 10px;
 }
 
 app-sqaure {
   border: 1px solid solid;
   border: none;
+}
+
+.board {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+/* common line styles */
+.line {
+  position: absolute;
+  background: #222;
+  border-radius: 3px;
+  animation-duration: 500ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+/* vertical lines */
+.v {
+  width: 6px;
+  height: 100%;
+  top: 0;
+  transform: scaleY(0);
+  transform-origin: center;
+  animation-name: grow-v;
+}
+
+.v1 {
+  left: 100px;
+}
+.v2 {
+  left: 200px;
+}
+
+/* horizontal lines */
+.h {
+  height: 6px;
+  width: 100%;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  animation-name: grow-h;
+}
+
+.h1 {
+  top: 100px;
+}
+.h2 {
+  top: 200px;
+}
+
+/* animations */
+@keyframes grow-v {
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes grow-h {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.v1 {
+  animation-delay: 0ms;
+}
+.h1 {
+  animation-delay: 100ms;
+}
+.v2 {
+  animation-delay: 200ms;
+}
+.h2 {
+  animation-delay: 300ms;
+}
+
+.line {
+  background: #444;
 }
